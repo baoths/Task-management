@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Dashboard Quản Lý Công Việc</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-gradient"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="dashboard">
+            <!-- Header -->
+            <div class="header">
+                <h1>Danh Sách Công Việc</h1>
+                <div class="header-actions">
+                    <div class="user-info">
+                        <div class="user-avatar" id="user-avatar"></div>
+                        <span id="user-name"></span>
+                    </div>
+                    <button class="btn-secondary" onclick="handleLogout()">Đăng Xuất</button>
+                </div>
+            </div>
+
+            <!-- Task Creation Form -->
+            <div class="task-form">
+                <h3>Tạo Công Việc Mới</h3>
+                <form onsubmit="handleCreateTask(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="task-title" placeholder="Nhập tên công việc..." required>
+                        </div>
+                        <div class="form-group">
+                            <select id="task-status">
+                                <option value="Pending"> Chờ xử lý</option>
+                                <option value="In Progress"> Đang thực hiện</option>
+                                <option value="Completed">Hoàn thành</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary btn-success">Tạo Mới</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Filters -->
+            <div class="task-filters">
+                <button class="filter-btn active" data-filter="all" onclick="filterTasks('all')">
+                    Tất cả (<span id="count-all">0</span>)
+                </button>
+                <button class="filter-btn" data-filter="Pending" onclick="filterTasks('Pending')">
+                    Chờ xử lý (<span id="count-pending">0</span>)
+                </button>
+                <button class="filter-btn" data-filter="In Progress" onclick="filterTasks('In Progress')">
+                    Đang làm (<span id="count-progress">0</span>)
+                </button>
+                <button class="filter-btn" data-filter="Completed" onclick="filterTasks('Completed')">
+                    Hoàn thành (<span id="count-completed">0</span>)
+                </button>
+            </div>
+
+            <!-- Task List -->
+            <div id="task-list" class="task-list">
+                <!-- Tasks will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Task Modal -->
+    <div id="edit-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Chỉnh Sửa Công Việc</h3>
+                <button class="modal-close" onclick="closeEditModal()">&times;</button>
+            </div>
+            <form onsubmit="handleUpdateTask(event)">
+                <input type="hidden" id="edit-task-id">
+                <div class="form-group">
+                    <label>Tên công việc</label>
+                    <input type="text" id="edit-task-title" required>
+                </div>
+                <div class="form-group">
+                    <label>Trạng thái</label>
+                    <select id="edit-task-status">
+                        <option value="Pending"> Chờ xử lý</option>
+                        <option value="In Progress"> Đang thực hiện</option>
+                        <option value="Completed"> Hoàn thành</option>
+                    </select>
+                </div>
+                <div class="form-row" style="grid-template-columns: 1fr 1fr; margin-top: 24px;">
+                    <button type="button" class="btn-secondary" onclick="closeEditModal()">Hủy</button>
+                    <button type="submit" class="btn-primary">Lưu Thay Đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/utils.js"></script>
+    <script src="/js/tasks.js"></script>
+</body>
+</html>
