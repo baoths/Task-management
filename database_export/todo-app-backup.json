@@ -3,64 +3,20 @@
     {
       "_id": "69326c92ed13f8b5ab8bec43",
       "userId": "6931985038d6d4b160dcfddd",
-      "title": "học anh văn",
+      "title": "test",
       "status": "In Progress",
       "completed": false,
       "active": true,
       "createDate": "2025-12-05T05:23:28.080Z",
       "modifyDate": "2025-12-14T14:32:39.057Z",
       "__v": 0
-    },
-    {
-      "_id": "6932b476df23ab44372c9798",
-      "userId": "6931985038d6d4b160dcfddd",
-      "title": "học bài",
-      "status": "Completed",
-      "completed": true,
-      "active": true,
-      "createDate": "2025-12-05T10:26:00.055Z",
-      "modifyDate": "2025-12-05T10:31:29.508Z",
-      "__v": 0
-    },
-    {
-      "_id": "693cd510d42fb1fafc3fd3e8",
-      "userId": "6931985038d6d4b160dcfddd",
-      "title": "ăn cơm",
-      "status": "Pending",
-      "completed": false,
-      "active": true,
-      "createDate": "2025-12-13T02:53:04.288Z",
-      "modifyDate": "2025-12-13T02:53:04.288Z",
-      "__v": 0
-    },
-    {
-      "_id": "693eca7aced1cec81d82b1cc",
-      "userId": "6931985038d6d4b160dcfddd",
-      "title": "học ăn",
-      "status": "Completed",
-      "completed": true,
-      "active": true,
-      "createDate": "2025-12-14T14:32:26.294Z",
-      "modifyDate": "2025-12-14T14:32:30.867Z",
-      "__v": 0
-    },
-    {
-      "_id": "693f8fbe8e6d98c401d444aa",
-      "userId": "6931985038d6d4b160dcfddd",
-      "title": "đi thi",
-      "status": "In Progress",
-      "completed": false,
-      "active": true,
-      "createDate": "2025-12-15T04:34:06.871Z",
-      "modifyDate": "2025-12-15T04:34:06.871Z",
-      "__v": 0
     }
   ],
   "users": [
     {
       "_id": "6931985038d6d4b160dcfddd",
-      "username": "minh",
-      "email": "tranminh@gmail.com",
+      "username": "test",
+      "email": "test@gmail.com",
       "password": "$2a$08$mXCrrKcKWkoMZD2.eyuwC.b5CtDUM2TKDABEZlElwCZL/S0VibIAS",
       "created": "2025-12-04T14:15:03.472Z",
       "__v": 0

@@ -39,5 +39,5 @@ temp/
 # Coverage
 coverage/
 
-# Database backups (tùy chọn - có thể bỏ comment nếu muốn giữ)
-# database_export/
+# Database backups
+database_export/
