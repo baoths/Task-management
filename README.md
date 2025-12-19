@@ -45,7 +45,7 @@ Work app/
 │   ├── models/                # Mongoose schemas
 │   ├── routes/                # API routes
 │   ├── scripts/               # Export/Import database
-│   ├── index.js               # Entry point
+│   ├── server.js               # Entry point
 │   ├── package.json           # Dependencies
 │   └── .env.example           # Environment template
 │
@@ -63,7 +63,6 @@ Work app/
 ├── database_export/            # Database backup
 │   └── todo-app-backup.json
 ├── LICENSE
-├── .gitignore
 └── README.md
 ```
 
@@ -76,18 +75,12 @@ Work app/
 ### Các bước
 
 ```bash
-# 1. Clone repository
-git clone https://github.com/baoths/Task-management.git
-cd "Task-management"
 
-# 2. Cài đặt dependencies
+# 1. Cài đặt dependencies
 cd backend
 npm install   # hoặc: pnpm install
 
-# 3. Tạo file môi trường
-cp .env.example .env
-
-# 4. Import database mẫu (tùy chọn)
+# 2. Import database mẫu (tùy chọn)
 node scripts/importDB.js
 
 # 5. Chạy server
